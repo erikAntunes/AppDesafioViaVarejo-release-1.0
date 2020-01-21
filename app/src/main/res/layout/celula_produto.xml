@@ -21,7 +21,7 @@
         app:strokeWidth="5dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/produto_imageView_id"
+            android:id="@+id/produto_circleImageView_id"
             android:layout_marginTop="5dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -31,7 +31,7 @@
 
 
         <TextView
-            android:id="@+id/produto_nome_textView_id"
+            android:id="@+id/produto_nome_TextView_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -45,7 +45,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/produto_valor_textView_id"
+            android:id="@+id/produto_valor_TextView_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
