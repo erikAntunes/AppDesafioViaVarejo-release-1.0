@@ -7,6 +7,8 @@ class Produto : Serializable {
 
     var imagem: String? = null
 
+    var descricao: String? = null
+
     var valor: String? = null
 
 }
