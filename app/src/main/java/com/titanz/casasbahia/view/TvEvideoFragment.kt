@@ -1,5 +1,6 @@
 package com.titanz.casasbahia.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +10,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.titanz.casasbahia.R
 import com.titanz.casasbahia.adapters.ProdutoAdapter
+import com.titanz.casasbahia.interfaces.ProdutoListener
 import com.titanz.casasbahia.models.Produto
 
 
-class TvEvideoFragment : Fragment() {
+class TvEvideoFragment : Fragment(), ProdutoListener {
 
     private var recyclerViewProduto: RecyclerView? = null
     private var produtoAdapter: ProdutoAdapter? = null
@@ -75,11 +77,23 @@ class TvEvideoFragment : Fragment() {
         recyclerViewProduto = view.findViewById(R.id.tvevideo_recyclerView_id)
         val layoutManager = GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false)
 
-        produtoAdapter = ProdutoAdapter(listaProdutos)
+        produtoAdapter = ProdutoAdapter(listaProdutos,this)
 
         recyclerViewProduto!!.adapter = produtoAdapter
         recyclerViewProduto!!.layoutManager = layoutManager
 
         return view
+    }
+
+    override fun onProdutoClicado(produto: Produto) {
+
+        val intent = Intent(context, DetalheProdutoActivity::class.java)
+
+        val bundle = Bundle()
+        bundle.putSerializable("TVEVIDEO", produto)
+
+        intent.putExtras(bundle)
+
+        startActivity(intent)
     }
 }

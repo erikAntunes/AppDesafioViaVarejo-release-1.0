@@ -7,12 +7,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.titanz.casasbahia.R
+import com.titanz.casasbahia.interfaces.ProdutoListener
 import com.titanz.casasbahia.models.Produto
 import de.hdodenhof.circleimageview.CircleImageView
 
 
 
-class ProdutoAdapter(private val listaProdutos: List<Produto>) : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() {
+class ProdutoAdapter(private val listaProdutos: List<Produto>, private val produtoListener: ProdutoListener) : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() {
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ProdutoAdapter.ProdutoViewHolder {
@@ -27,6 +28,8 @@ class ProdutoAdapter(private val listaProdutos: List<Produto>) : RecyclerView.Ad
         val produtos = listaProdutos[i]
 
         ProdutoViewHolder.setupServicos(produtos)
+
+        ProdutoViewHolder.itemView.setOnClickListener{produtoListener.onProdutoClicado(listaProdutos[i]) }
 
     }
 

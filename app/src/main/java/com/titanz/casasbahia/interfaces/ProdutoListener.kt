@@ -4,5 +4,5 @@ import com.titanz.casasbahia.models.Produto
 
 interface ProdutoListener {
 
-    fun onProdutoCliclado(produto: Produto)
+    fun onProdutoClicado(produto: Produto)
 }
