@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -24,7 +25,7 @@ class ProdutoFragment : Fragment() {
 
         val produtos1 = Produto()
         produtos1.nome = "Smart TV LED 43 Full HD LG"
-        produtos1.imagem = "https://i.ibb.co/LrzVM0Q/proibido-menores18-logo.png"
+        produtos1.imagem = "https://i.ibb.co/phDMS6P/produto1-mock.png"
         produtos1.valor = "R$ 1549,00"
 
         listaProdutos.add(produtos1)
@@ -35,7 +36,7 @@ class ProdutoFragment : Fragment() {
         listaProdutos.add(produtos1)
 
         recyclerViewProduto = view.findViewById(R.id.produto_recyclerView_id)
-        val layoutManager = LinearLayoutManager(context)
+        val layoutManager = GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false)
 
         produtoAdapter = ProdutoAdapter(listaProdutos)
 
