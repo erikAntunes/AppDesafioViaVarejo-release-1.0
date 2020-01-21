@@ -3,12 +3,12 @@ package com.titanz.casasbahia.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import java.util.ArrayList
 
+class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
-class MenuAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm){
-
-    private  val fragmentList = ArrayList<Fragment>()
-    private  val fragmentListTitles = ArrayList<String>()
+    private val fragmentList = ArrayList<Fragment>()
+    private val fragmentListTitles = ArrayList<String>()
 
     override fun getItem(position: Int): Fragment {
         return fragmentList[position]
@@ -22,7 +22,7 @@ class MenuAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm){
         return fragmentListTitles[position]
     }
 
-    fun AddFragment(fragment: Fragment, title: String){
+    fun AddFragment(fragment: Fragment, title: String) {
         fragmentList.add(fragment)
         fragmentListTitles.add(title)
     }
