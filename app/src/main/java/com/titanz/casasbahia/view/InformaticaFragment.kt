@@ -1,62 +1,62 @@
 package com.titanz.casasbahia.view
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import com.titanz.casasbahia.R
 import com.titanz.casasbahia.adapters.ProdutoAdapter
 import com.titanz.casasbahia.models.Produto
 
-class ProdutoFragment : Fragment() {
+
+class InformaticaFragment : Fragment() {
 
     private var recyclerViewProduto: RecyclerView? = null
     private var produtoAdapter: ProdutoAdapter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view = inflater.inflate(R.layout.fragment_produto, container, false)
+        val view = inflater.inflate(R.layout.fragment_informatica, container, false)
 
         val listaProdutos = ArrayList<Produto>()
 
         val produtos1 = Produto()
-        produtos1.nome = "Smart TV LED 43 Full HD LG"
-        produtos1.imagem = "https://i.ibb.co/phDMS6P/produto1-mock.png"
-        produtos1.valor = "R$ 1549,00"
+        produtos1.nome = "Kit PC Gamer Smart SMT81462 i5 8GB"
+        produtos1.imagem = "https://i.ibb.co/dQNfDYQ/produto7-mock.png"
+        produtos1.valor = "R$ 2524,52"
         listaProdutos.add(produtos1)
 
         val produtos2 = Produto()
-        produtos2.nome = "Smart TV LED 50 UHD 4K Samsung"
-        produtos2.imagem = "https://i.ibb.co/0BqdCpK/produto2-mock.png"
-        produtos2.valor = "R$ 2299,00"
+        produtos2.nome = "Computador EasyPC Standard Intel Core i3 4GB"
+        produtos2.imagem = "https://i.ibb.co/K7Wq3xw/produto8-mock.png"
+        produtos2.valor = "R$ 1169,00"
         listaProdutos.add(produtos2)
 
         val produtos3 = Produto()
-        produtos3.nome = "Smart TV LED 32 HD LG"
-        produtos3.imagem = "https://i.ibb.co/QfR0WLc/produto3-mock.png"
-        produtos3.valor = "R$ 999,00"
+        produtos3.nome = "Notebook Samsung Core i3-7020U 4GB"
+        produtos3.imagem = "https://i.ibb.co/XJ1bTBR/produto9-mock.png"
+        produtos3.valor = "R$ 1869,00"
         listaProdutos.add(produtos3)
 
         val produtos4 = Produto()
-        produtos4.nome = "Smart TV LED 32 HD LG"
-        produtos4.imagem = "https://i.ibb.co/mRw2d0R/produto4-mock.png"
-        produtos4.valor = "R$ 879,00"
+        produtos4.nome = "Notebook Gamer Aspire Nitro 5 AN515-52-5771"
+        produtos4.imagem = "https://i.ibb.co/rsKWhB7/produto10-mock.png"
+        produtos4.valor = "R$ 3299,90"
         listaProdutos.add(produtos4)
 
         val produtos5 = Produto()
-        produtos5.nome = "Smart Android LED 32 HD Philco"
-        produtos5.imagem = "https://i.ibb.co/2FtbQFx/produto5-mock.png"
-        produtos5.valor = "R$ 979,00"
+        produtos5.nome = "Notebook Positivo Quad Core 4GB 32GB SSD"
+        produtos5.imagem = "https://i.ibb.co/BtmYnv7/produto11-mock.png"
+        produtos5.valor = "R$ 1099,00"
         listaProdutos.add(produtos5)
 
         val produtos6 = Produto()
-        produtos6.nome = "TV Conversor Transforma em SMART TV HD 4K"
-        produtos6.imagem = "https://i.ibb.co/Ntnv7DV/produto6-mock.png"
-        produtos6.valor = "R$ 109,90"
+        produtos6.nome = "Multifuncional HP Deskjet Ink Advantage 3776"
+        produtos6.imagem = "https://i.ibb.co/H2wc8FF/produto12-mock.png"
+        produtos6.valor = "R$ 449,47"
         listaProdutos.add(produtos6)
 
         listaProdutos.add(produtos1)
@@ -72,8 +72,8 @@ class ProdutoFragment : Fragment() {
         listaProdutos.add(produtos5)
         listaProdutos.add(produtos6)
 
-        recyclerViewProduto = view.findViewById(R.id.produto_recyclerView_id)
-        val layoutManager = GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false)
+        recyclerViewProduto = view.findViewById(R.id.informatica_recyclerView_id)
+        val layoutManager = GridLayoutManager(context,2, GridLayoutManager.HORIZONTAL,false)
 
         produtoAdapter = ProdutoAdapter(listaProdutos)
 
@@ -82,4 +82,6 @@ class ProdutoFragment : Fragment() {
 
         return view
     }
+
+
 }

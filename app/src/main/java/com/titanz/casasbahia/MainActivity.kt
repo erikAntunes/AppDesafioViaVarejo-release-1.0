@@ -1,4 +1,5 @@
 package com.titanz.casasbahia
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -6,8 +7,9 @@ import androidx.viewpager.widget.ViewPager
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.google.android.material.tabs.TabLayout
 import com.titanz.casasbahia.adapters.ViewPagerAdapter
-import com.titanz.casasbahia.view.ProdutoFragment
-import com.titanz.casasbahia.view.PromocaoFragment
+import com.titanz.casasbahia.view.InformaticaFragment
+import com.titanz.casasbahia.view.TvEvideoFragment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.viewpager_main_id)
 
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.AddFragment(ProdutoFragment(), "Tvs e Vídeo")
-        adapter.AddFragment(PromocaoFragment(), "Informática")
+        adapter.AddFragment(TvEvideoFragment(), "Tvs e Vídeo")
+        adapter.AddFragment(InformaticaFragment(), "Informática")
 
         viewPager!!.adapter = adapter
         tabLayout!!.setupWithViewPager(viewPager)

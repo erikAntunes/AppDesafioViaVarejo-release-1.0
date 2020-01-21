@@ -10,6 +10,8 @@ import com.titanz.casasbahia.R
 import com.titanz.casasbahia.models.Produto
 import de.hdodenhof.circleimageview.CircleImageView
 
+
+
 class ProdutoAdapter(private val listaProdutos: List<Produto>) : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() {
 
 

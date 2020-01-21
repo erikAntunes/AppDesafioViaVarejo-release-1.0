@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".view.ProdutoFragment">
+    tools:context=".view.TvEvideoFragment">
 
     <com.google.android.material.card.MaterialCardView
 
@@ -21,8 +21,8 @@
         app:strokeWidth="5dp">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tvevideo_recyclerView_id"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/produto_recyclerView_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
