@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.viewpager_main_id)
 
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.AddFragment(ProdutoFragment(), "Produtos")
-        adapter.AddFragment(PromocaoFragment(), "Promoções")
+        adapter.AddFragment(ProdutoFragment(), "Tvs e Vídeo")
+        adapter.AddFragment(PromocaoFragment(), "Informática")
 
         viewPager!!.adapter = adapter
         tabLayout!!.setupWithViewPager(viewPager)
